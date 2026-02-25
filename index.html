@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinted Optimizer - Maximize Vinted Revenue</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-600 { animation-delay: 600ms; }
+
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up, .animate-fade-in, .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 transition-all duration-300 animate-fade-in delay-0">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+            
+            <!-- Left: Logo & Links -->
+            <div class="flex items-center gap-10">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+                    <div class="w-[22px] h-[22px] bg-gray-900 rounded-[4px] skew-x-[-15deg]"></div>
+                    <span class="text-[26px] font-bold tracking-tight text-gray-900 mt-0.5">vinted optimizer</span>
+                </a>
+
+                <!-- Desktop Links -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <button class="flex items-center gap-1.5 text-[15px] font-medium text-gray-600 hover:text-gray-900 transition-colors">
+                        Platform
+                        <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <button class="flex items-center gap-1.5 text-[15px] font-medium text-gray-600 hover:text-gray-900 transition-colors">
+                        Resources
+                        <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <a href="#" class="text-[15px] font-medium text-gray-600 hover:text-gray-900 transition-colors">Customers</a>
+                    <a href="#" class="text-[15px] font-medium text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
+                </div>
+            </div>
+
+            <!-- Right: Auth Buttons -->
+            <div class="flex items-center gap-4">
+                <a href="#" class="hidden md:block text-[15px] font-medium text-gray-700 hover:text-gray-900 transition-colors px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50">
+                    Sign in
+                </a>
+                <a href="#" class="text-[15px] font-medium bg-[#0ea5e9] text-white px-5 py-2.5 rounded-lg hover:opacity-90 transition-colors duration-200 active:scale-[0.97]">
+                    Start for free
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Hero Section -->
+    <main class="pt-32 pb-0">
+        
+        <!-- Hero Content -->
+        <section class="max-w-[1000px] mx-auto px-6 text-center flex flex-col items-center pt-10 pb-16">
+            
+            <!-- Announcement Badge -->
+            <a href="#" class="animate-fade-in-up delay-100 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors mb-8 shadow-sm">
+                The #1 listing optimization platform for Vinted
+                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+
+            <!-- Headline -->
+            <h1 class="animate-fade-in-up delay-200 text-5xl md:text-7xl lg:text-[84px] font-extrabold tracking-[-0.03em] text-gray-900 leading-[1.05] text-balance mb-6">
+                Maximize Vinted<br />Item Revenue.
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="animate-fade-in-up delay-300 text-xl md:text-[22px] text-gray-500 font-medium text-pretty mb-10">
+                Maximize your sell-through rates with algorithmic keyword placement and high-conversion description structures designed for serious resellers.
+            </p>
+
+            <!-- CTAs -->
+            <div class="animate-fade-in-up delay-400 flex flex-col sm:flex-row items-center gap-4">
+                <a href="#" class="w-full sm:w-auto text-base font-medium bg-[#0ea5e9] text-white px-6 py-3 rounded-lg hover:opacity-90 transition-colors duration-200 active:scale-[0.97]">
+                    Start for free
+                </a>
+                <a href="#" class="w-full sm:w-auto text-base font-medium bg-white text-gray-900 border border-gray-200 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 active:scale-[0.97]">
+                    View Performance Metrics
+                </a>
+            </div>
+        </section>
+
+        <!-- Tabs & UI Mockup Section -->
+        <section class="w-full relative mt-4">
+            
+            <!-- Full width dashed line top -->
+            <div class="absolute top-0 left-0 w-full border-t border-dashed border-gray-200"></div>
+
+            <!-- Tabs Container -->
+            <div class="w-full border-b border-dashed border-gray-200 overflow-x-auto">
+                <div class="min-w-[800px] max-w-[1080px] mx-auto grid grid-cols-4 border-x border-dashed border-gray-200 animate-fade-in-up delay-500">
+                    
+                    <!-- Active Tab -->
+                    <button class="relative py-5 text-center text-[15px] font-medium text-gray-900 bg-gray-50 border-r border-dashed border-gray-200 transition-colors">
+                        Smart Optimization
+                        <!-- Active Indicator Line -->
+                        <div class="absolute -bottom-[1px] left-1/2 -translate-x-1/2 w-24 h-[2px] bg-gray-900"></div>
+                    </button>
+
+                    <!-- Inactive Tabs -->
+                    <button class="py-5 text-center text-[15px] font-medium text-gray-500 hover:text-gray-900 border-r border-dashed border-gray-200 transition-colors bg-white">
+                        Keyword Analytics
+                    </button>
+                    <button class="py-5 text-center text-[15px] font-medium text-gray-500 hover:text-gray-900 border-r border-dashed border-gray-200 transition-colors bg-white">
+                        Batch Processing
+                    </button>
+                    <button class="py-5 text-center text-[15px] font-medium text-gray-500 hover:text-gray-900 transition-colors bg-white">
+                        Sales Tracking
+                    </button>
+                </div>
+            </div>
+
+            <!-- UI Mockup -->
+            <div class="w-full pb-24 overflow-x-auto">
+                <div class="min-w-[800px] max-w-[1080px] mx-auto border-x border-dashed border-gray-200">
+                    <div class="animate-scale-in delay-600 w-full bg-white">
+                        <img 
+                            src="https://placehold.co/1080x640/ffffff/e5e7eb?text=Vinted Optimizer+Dashboard+UI+Mockup\n(Sidebar,+List+View,+Ask+Vinted Optimizer+Panel)" 
+                            alt="Vinted Optimizer Dashboard Interface" 
+                            class="w-full h-auto block"
+                        />
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>
